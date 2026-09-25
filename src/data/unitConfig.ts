@@ -54,6 +54,7 @@ export const UNITS_DATA: Record<string, UnitData> = {
     whatsappMessage: 'Olá! Gostaria de agendar uma consulta de avaliação na OdontoCompany Jardim São Luís.',
     instagramUrl: 'https://www.instagram.com/odontocompanyjdsaoluissp/',
     facebookUrl: 'https://web.facebook.com/profile.php?id=61573231600613&locale=pt_BR',
+    croCl: 'CRO-SP 19111',
     address: {
       street: 'Av. Maria Coelho Aguiar',
       number: '756',
