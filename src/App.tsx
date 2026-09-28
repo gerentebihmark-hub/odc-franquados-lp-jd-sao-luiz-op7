@@ -615,13 +615,13 @@ export default function App() {
                   key={i}
                   className="bg-white rounded-3xl overflow-hidden border border-neutral-border shadow-lg max-w-sm w-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 text-left"
                 >
-                  <div className="h-80 overflow-hidden relative bg-slate-100">
+                  <div className="h-80 overflow-hidden relative bg-slate-50 flex items-center justify-center p-2">
                     <img 
                       src={dentist.photoUrl} 
                       alt={dentist.name} 
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" 
+                      className="w-full h-full object-contain" 
                     />
                   </div>
                   <div className="p-7 space-y-2.5">
