@@ -7,7 +7,7 @@ export interface UnitData {
   whatsappMessage: string;
   instagramUrl: string;
   facebookUrl: string;
-  croCl?: string;
+  croCl: string;
   address: {
     street: string;
     number: string;
