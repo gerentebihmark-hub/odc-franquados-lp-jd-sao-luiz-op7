@@ -247,12 +247,6 @@ export default function App() {
               
               {/* Left Column: Heading and Form */}
               <div className="lg:col-span-7 space-y-6 text-left max-w-2xl">
-                
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-brand-lime text-xs font-bold uppercase tracking-wider">
-                  <MapPin className="w-4 h-4" />
-                  Unidade {unit.name}
-                </div>
-
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
                   Sorria de verdade com a <span className="uppercase">OdontoCompany <span className="text-brand-lime">{unit.name}</span></span>
                 </h1>
@@ -543,7 +537,6 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div className="max-w-3xl mx-auto space-y-4 mb-12 flex flex-col items-center text-center">
               <div className="flex flex-col items-center">
-                <span className="text-brand-lime font-bold uppercase tracking-widest text-xs sm:text-sm mb-2">Conheça Nossa Unidade</span>
                 <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
                   Estrutura moderna planejada para o seu bem-estar
                 </h2>
@@ -558,22 +551,16 @@ export default function App() {
               </p>
             </div>
 
-            {/* Visual Showcase Card with Ambient Blur Fill (Zero Crop, Zero Empty Borders) */}
+            {/* Visual Showcase Card */}
             <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-white/20 bg-white/5 backdrop-blur-md relative group">
-              <div className="relative w-full flex items-center justify-center bg-black/20 overflow-hidden min-h-[320px] sm:min-h-[420px] md:min-h-[480px]">
-                {/* Ambient blurred backdrop that naturally matches the photo */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center blur-2xl opacity-40 scale-110 pointer-events-none"
-                  style={{ backgroundImage: `url(${unit.images.facade})` }}
-                ></div>
-                
+              <div className="relative w-full flex items-center justify-center bg-black/20 overflow-hidden">
                 {/* Main crisp uncropped image */}
                 <img 
                   src={unit.images.facade} 
                   alt={`Fachada Clínica OdontoCompany ${unit.name}`}
                   loading="lazy"
                   decoding="async"
-                  className="relative z-10 w-auto max-w-full max-h-[520px] md:max-h-[580px] object-contain rounded-2xl transition-transform duration-700 group-hover:scale-[1.01] p-1 sm:p-2" 
+                  className="w-full h-auto block object-contain transition-transform duration-700 group-hover:scale-[1.01]" 
                 />
               </div>
               
