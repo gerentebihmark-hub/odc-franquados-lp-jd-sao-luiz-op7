@@ -609,25 +609,25 @@ export default function App() {
               </p>
             </div>
 
-            <div className="flex justify-center">
+            <div className="flex flex-wrap justify-center gap-8">
               {unit.dentists.map((dentist, i) => (
                 <div 
                   key={i}
-                  className="bg-white rounded-3xl overflow-hidden border border-neutral-border shadow-lg max-w-md w-full transition-all duration-300 hover:shadow-xl text-center p-6 flex flex-col items-center"
+                  className="bg-white rounded-3xl overflow-hidden border border-neutral-border shadow-lg max-w-sm w-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 text-left"
                 >
-                  <div className="w-full flex items-center justify-center py-4 bg-slate-50/80 rounded-2xl border border-slate-100 mb-6">
+                  <div className="h-96 overflow-hidden relative bg-slate-100">
                     <img 
                       src={dentist.photoUrl} 
                       alt={dentist.name} 
-                      loading="eager"
+                      loading="lazy"
                       decoding="async"
-                      className="max-w-[220px] w-auto h-auto object-contain block drop-shadow-md rounded-xl" 
+                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" 
                     />
                   </div>
-                  <div className="space-y-2">
-                    <h3 className="text-xl md:text-2xl font-bold text-brand-odc">{dentist.name}</h3>
+                  <div className="p-7 space-y-2.5">
+                    <h3 className="text-xl font-bold text-brand-odc">{dentist.name}</h3>
                     <p className="text-xs font-bold text-brand-green-primary uppercase tracking-wider">{dentist.specialty}</p>
-                    <p className="text-xs text-brand-emerald font-semibold">{dentist.cro}</p>
+                    <p className="text-xs text-brand-emerald font-medium">{dentist.cro}</p>
                   </div>
                 </div>
               ))}
